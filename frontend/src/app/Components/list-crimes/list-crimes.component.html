@@ -1,0 +1,27 @@
+<button type="button" class="btn btn-outline-dark" id="retour" [routerLink]="['/Accueil']">retour à l'Accueil</button>
+<h4 style="text-align: center">
+  Représentation des crimes commis à Boston et à Las Vegas de 2016 à 2018 :
+</h4>
+
+
+<div *ngIf="loaderLV2018==1 && loaderLV2017==1 && loaderLV2016==1 && loaderBos2018==1 && loaderBos2017==1 && loaderBos2016==1 " style="width: 40%;margin-left: 30% ; margin-top: 2%">
+  <div style="display: block">
+    <canvas baseChart
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [legend]="barChartLegend"
+            [chartType]="barChartType">
+    </canvas>
+  </div>
+</div>
+<h4 style="text-align: center"> Nombre de crimes total commis à Boston et à Las Vegas de 2016 à 2018 :</h4>
+<div *ngIf="loaderBos==1 && loaderLasVegas==1" style="width: 40%; margin-left: 30%; margin-top: 2%">
+  <div style="display: block">
+    <canvas baseChart
+                [data]="doughnutChartData"
+                [labels]="doughnutChartLabels"
+                [chartType]="doughnutChartType"></canvas>
+  </div>
+</div>
+

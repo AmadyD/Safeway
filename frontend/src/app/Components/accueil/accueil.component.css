@@ -1,0 +1,21 @@
+#block_container
+{
+    text-align:center;
+}
+#bloc1, #bloc2, #bloc3
+{
+    display:inline;
+}
+#ligne{margin-top: 3%}
+#date_debut{
+  margin-left: 10px;
+}
+#container{
+
+  display:flex;
+  justify-content: center;
+  padding: 2px;
+}
+#container > div {
+  margin:50px;
+}

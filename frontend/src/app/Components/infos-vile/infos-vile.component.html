@@ -1,0 +1,64 @@
+
+<!-- Déclaration du conteneur de la carte avec l'id "frugalmap" -->
+<button type="button" class="btn btn-outline-dark" id="retour" [routerLink]="['/Accueil']">retour à l'Accueil</button>
+<div id="ligne" >
+    <diV id='container1'>
+        <div class="form-group col-md-2">
+            <label for="inputState">Ville :</label>
+            <select id="inputState" class="form-control"  [(ngModel)]="selectedVille" >
+              <option selected >Choisissez une ville</option>
+              <option >Boston</option>
+              <option >Las Vegas</option>
+            </select>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputState">Année :</label>
+            <select id="inputState" class="form-control"  [(ngModel)]="selectedYear">
+              <option selected>Choisissez une Année</option>
+              <option >2016</option>
+              <option >2017</option>
+              <option >2018</option>
+            </select>
+          </div>
+    </diV>
+</div>
+<div class="col-auto" style="text-align:center" style="text-align: center">
+  <button type="submit" class="btn btn-primary mb-2" style="width:130px" (click)="load()" >Submit</button>
+</div>
+<div id="container">
+  <div id="frugalmap" >
+
+  </div>
+  <div *ngIf="janv==1 && fev==1 && mars==1 && avrl==1 && mai==1 && juin==1 && juillet==1 && aout==1 && sept==1 && oct==1 && nov==1 && dec==1 && bool==0">
+    <div class="row" id="line" >
+      <canvas baseChart width="400" height="400"
+                  [datasets]="lineChartData"
+                  [labels]="lineChartLabels"
+                  [options]="lineChartOptions"
+                  [colors]="lineChartColors"
+                  [legend]="lineChartLegend"
+                  [chartType]="lineChartType"
+                  (chartHover)="chartHovered($event)"
+                  (chartClick)="chartClicked($event)"></canvas>
+
+  </div>
+  </div>
+  <div *ngIf="janv==2 && fev==2 && mars==2 && avrl==2 && mai==2 && juin==2 && juillet==2 && aout==2 && sept==2 && oct==2 && nov==2 && dec==2 && bool==1">
+    <div class="row" id="line1" >
+      <canvas baseChart width="400" height="400"
+                  [datasets]="lineChartData"
+                  [labels]="lineChartLabels"
+                  [options]="lineChartOptions"
+                  [colors]="lineChartColors"
+                  [legend]="lineChartLegend"
+                  [chartType]="lineChartType"
+                  (chartHover)="chartHovered($event)"
+                  (chartClick)="chartClicked($event)"></canvas>
+
+  </div>
+  </div>
+
+</div>
+
+
+

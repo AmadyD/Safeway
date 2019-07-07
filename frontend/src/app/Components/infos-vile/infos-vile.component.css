@@ -1,0 +1,39 @@
+#frugalmap {
+  height: 400px;
+  width: 30%;
+  margin-left: 5%;
+margin-top: 5%;
+
+}
+#block_container
+{
+    text-align:center;
+}
+#bloc1, #bloc2, #bloc3
+{
+    display:inline;
+}
+#linechart { width: 70%;}
+#container{
+
+  display:flex;
+  justify-content: center;
+  padding: 2px;
+}
+#container > div {
+  margin:50px;
+}
+#retour{
+  margin-left: 90%;
+  margin-top: 2%
+}
+#container1{
+
+  display:flex;
+  justify-content: center;
+  padding: 2px;
+}
+#container1 > div {
+  margin:50px;
+}
+
